@@ -2,12 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.energy</groupId>
-        <artifactId>energy-platform</artifactId>
-        <version>2024.12.16</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
     <groupId>com.energy.starter</groupId>
     <artifactId>energy-spring-boot-starter</artifactId>
     <version>2024.12.16</version>
@@ -19,6 +13,19 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.energy</groupId>
+                <artifactId>energy-platform</artifactId>
+                <version>2024.12.16</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>com.energy.base</groupId>
