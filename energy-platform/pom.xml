@@ -5,7 +5,7 @@
 
     <groupId>com.energy</groupId>
     <artifactId>energy-platform</artifactId>
-    <version>2024.12.16</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>energy-platform</name>
     <description>energy platform</description>

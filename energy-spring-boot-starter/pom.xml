@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.energy.starter</groupId>
     <artifactId>energy-spring-boot-starter</artifactId>
-    <version>2024.12.16</version>
+    <version>1.0.0</version>
     <name>energy-spring-boot-starter</name>
 
     <properties>
@@ -19,7 +19,7 @@
             <dependency>
                 <groupId>com.energy</groupId>
                 <artifactId>energy-platform</artifactId>
-                <version>2024.12.16</version>
+                <version>1.0.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -30,7 +30,7 @@
         <dependency>
             <groupId>com.energy.base</groupId>
             <artifactId>energy-base</artifactId>
-            <version>2024.12.16</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

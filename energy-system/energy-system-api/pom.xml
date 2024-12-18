@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.energy.system</groupId>
         <artifactId>energy-system</artifactId>
-        <version>2024.12.16</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>energy-system-api</artifactId>
