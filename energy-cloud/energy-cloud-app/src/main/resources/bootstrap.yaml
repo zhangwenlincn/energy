@@ -1,0 +1,8 @@
+server:
+  port: 8183
+spring:
+  application:
+    name: energy-cloud
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.yaml

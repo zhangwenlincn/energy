@@ -40,12 +40,14 @@ public class NacosConfigInitializerProcessor implements EnvironmentPostProcessor
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
         ClassPathResource classPathResource = new ClassPathResource(NACOS_PROPERTIES);
-        String active = Optional.ofNullable(environment.getProperty(SPRING_PROFILES_ACTIVE)).orElse("local");
-        Map<String, Object> activeProperties = new HashMap<>();
-        activeProperties.put(SPRING_PROFILES_ACTIVE, active);
-        environment.getPropertySources().addLast(new MapPropertySource(SPRING_PROFILES_ACTIVE, activeProperties));
-        Map<String, Object> nacosProperties = getResource(active, classPathResource);
-        environment.getPropertySources().addLast(new MapPropertySource(NACOS_PROPERTIES, nacosProperties));
+        if (classPathResource.exists()) {
+            String active = Optional.ofNullable(environment.getProperty(SPRING_PROFILES_ACTIVE)).orElse("local");
+            Map<String, Object> activeProperties = new HashMap<>();
+            activeProperties.put(SPRING_PROFILES_ACTIVE, active);
+            environment.getPropertySources().addLast(new MapPropertySource(SPRING_PROFILES_ACTIVE, activeProperties));
+            Map<String, Object> nacosProperties = getResource(active, classPathResource);
+            environment.getPropertySources().addLast(new MapPropertySource(NACOS_PROPERTIES, nacosProperties));
+        }
     }
 
     public Map<String, Object> getResource(String property, ClassPathResource classPathResource) {

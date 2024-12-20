@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.energy.system</groupId>
-        <artifactId>energy-system</artifactId>
+        <groupId>com.energy.boot</groupId>
+        <artifactId>energy-boot</artifactId>
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>energy-system-app</artifactId>
+    <artifactId>energy-boot-app</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -17,30 +17,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-        <!-- bootstrap 启动器 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
-        </dependency>
-
-
         <dependency>
             <groupId>com.energy.starter</groupId>
             <artifactId>energy-spring-boot-starter</artifactId>
@@ -56,5 +38,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
