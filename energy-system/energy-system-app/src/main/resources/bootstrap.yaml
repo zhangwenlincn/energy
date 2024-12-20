@@ -3,13 +3,6 @@ server:
 spring:
   application:
     name: energy-system
-  cloud:
-    nacos:
-      discovery:
-        server-addr: nacos.energy.com:8848
-        namespace: energy
-        group: app
-      config:
-        server-addr: nacos.energy.com:8848
-        namespace: energy
-        group: app
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.yaml

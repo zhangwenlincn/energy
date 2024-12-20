@@ -1,11 +1,8 @@
 server:
   port: 80
 spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: nacos.energy.com:8848
-        namespace: energy
-        group: app
   application:
     name: energy-gateway
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.yaml
