@@ -21,6 +21,7 @@
         <spring.boot.version>3.4.0</spring.boot.version>
         <spring.cloud.version>2024.0.0</spring.cloud.version>
 		<spring.cloud.alibaba.version>2023.0.3.2</spring.cloud.alibaba.version>
+        <dubbo.version>3.3.2</dubbo.version>
     </properties>
 
     <dependencyManagement>
@@ -45,10 +46,17 @@
 			<dependency>
 				<groupId>com.alibaba.cloud</groupId>
 				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
-				<version>2023.0.3.2</version>
+				<version>${spring.cloud.alibaba.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-dependencies</artifactId>
+                <version>${dubbo.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -71,6 +79,11 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>3.17.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>4.4</version>
             </dependency>
 
             <dependency>
