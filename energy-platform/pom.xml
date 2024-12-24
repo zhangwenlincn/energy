@@ -59,6 +59,17 @@
             </dependency>
 
             <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-nacos-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>3.0.4</version>

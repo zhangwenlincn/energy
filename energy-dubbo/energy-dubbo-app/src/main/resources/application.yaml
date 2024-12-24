@@ -1,0 +1,22 @@
+server:
+  port: 8183
+spring:
+  application:
+    name: energy-dubbo
+
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    address: nacos://nacos.energy.com:8848
+    group: app
+    parameters:
+      namespace: energy
+  protocol:
+    name: dubbo
+  provider:
+    timeout: 30000
+    retries: 2
+  consumer:
+    timeout: 30000
+    retries: 2

@@ -28,8 +28,18 @@
 				<scope>import</scope>
 			</dependency>
 			<dependency>
+				<groupId>com.energy.base</groupId>
+				<artifactId>energy-base</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
 				<groupId>com.energy.starter</groupId>
 				<artifactId>energy-spring-boot-starter</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.energy.cloud</groupId>
+				<artifactId>energy-cloud-api</artifactId>
 				<version>1.0.0</version>
 			</dependency>
 		</dependencies>

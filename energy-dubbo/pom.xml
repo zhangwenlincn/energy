@@ -2,15 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.energy.boot</groupId>
-	<artifactId>energy-boot</artifactId>
+
+	<groupId>com.energy.dubbo</groupId>
+	<artifactId>energy-dubbo</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
-	<name>energy-boot</name>
+	<name>energy-dubbo</name>
 	<modules>
-		<module>energy-boot-api</module>
-		<module>energy-boot-app</module>
+		<module>energy-dubbo-api</module>
+		<module>energy-dubbo-app</module>
 	</modules>
+
 	<properties>
 		<java.version>21</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
@@ -28,18 +30,18 @@
 				<scope>import</scope>
 			</dependency>
 			<dependency>
-				<groupId>com.energy.base</groupId>
-				<artifactId>energy-base</artifactId>
-				<version>1.0.0</version>
-			</dependency>
-			<dependency>
 				<groupId>com.energy.starter</groupId>
 				<artifactId>energy-spring-boot-starter</artifactId>
 				<version>1.0.0</version>
 			</dependency>
 			<dependency>
-				<groupId>com.energy.boot</groupId>
-				<artifactId>energy-boot-api</artifactId>
+				<groupId>com.energy.base</groupId>
+				<artifactId>energy-base</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.energy.dubbo</groupId>
+				<artifactId>energy-dubbo-api</artifactId>
 				<version>1.0.0</version>
 			</dependency>
 		</dependencies>
@@ -80,5 +82,4 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
 </project>
