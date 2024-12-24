@@ -11,6 +11,7 @@
 	<modules>
 		<module>energy-dubbo-api</module>
 		<module>energy-dubbo-app</module>
+		<module>energy-dubbo-server</module>
 	</modules>
 
 	<properties>
