@@ -14,9 +14,8 @@ dubbo:
       namespace: energy
   protocol:
     name: dubbo
+    port: -1
   provider:
     timeout: 30000
-    retries: 2
   consumer:
     timeout: 30000
-    retries: 2

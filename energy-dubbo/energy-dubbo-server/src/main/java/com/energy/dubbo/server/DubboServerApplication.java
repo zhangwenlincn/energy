@@ -10,8 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @EnableDubbo
 @SpringBootApplication
-public class EnergyDubboServerApplication {
+public class DubboServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EnergyDubboServerApplication.class, args);
+        SpringApplication.run(DubboServerApplication.class, args);
     }
 }

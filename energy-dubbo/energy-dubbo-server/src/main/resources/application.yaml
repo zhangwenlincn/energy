@@ -8,15 +8,14 @@ dubbo:
   application:
     name: ${spring.application.name}
   registry:
-    address: nacos://nacos.energy.com:8848
-    group: app
+    address: nacos://${NACOS_ADDRESS:nacos.energy.com:8848}
+    group: ${NACOS_GROUP:app}
     parameters:
-      namespace: energy
+      namespace: ${NACOS_NAMESPACE:energy}
   protocol:
     name: dubbo
+    port: -1
   provider:
     timeout: 30000
-    retries: 2
   consumer:
     timeout: 30000
-    retries: 2
