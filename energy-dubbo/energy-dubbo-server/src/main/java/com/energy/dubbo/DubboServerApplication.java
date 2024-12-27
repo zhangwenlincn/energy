@@ -1,4 +1,4 @@
-package com.energy.dubbo.server;
+package com.energy.dubbo;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;

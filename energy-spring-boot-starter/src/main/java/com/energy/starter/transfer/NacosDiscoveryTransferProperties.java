@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-@ConfigurationProperties(prefix = "energy.transfer")
+@ConfigurationProperties(prefix = "energy.cloud.transfer")
 public class NacosDiscoveryTransferProperties {
 
     private boolean enabled;

@@ -6,3 +6,11 @@ spring:
   config:
     import:
       - optional:nacos:${spring.application.name}.yaml
+
+energy:
+  cloud:
+    transfer:
+      enabled: true
+      transfers:
+        - serviceId: cloud-server
+          namespace: public

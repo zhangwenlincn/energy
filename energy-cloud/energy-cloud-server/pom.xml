@@ -9,7 +9,8 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>energy-cloud-app</artifactId>
+    <artifactId>energy-cloud-server</artifactId>
+
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>

@@ -10,7 +10,8 @@
 	<modules>
 		<module>energy-cloud-api</module>
 		<module>energy-cloud-app</module>
-	</modules>
+        <module>energy-cloud-server</module>
+    </modules>
 	<properties>
 		<java.version>21</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>

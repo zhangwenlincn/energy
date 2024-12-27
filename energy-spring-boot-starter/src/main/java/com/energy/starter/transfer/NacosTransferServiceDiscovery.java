@@ -7,6 +7,7 @@ import com.alibaba.nacos.api.exception.NacosException;
 import com.alibaba.nacos.api.naming.NamingService;
 import com.alibaba.nacos.api.naming.pojo.Instance;
 import com.alibaba.nacos.client.naming.NacosNamingService;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.client.ServiceInstance;
@@ -44,12 +45,13 @@ public class NacosTransferServiceDiscovery extends NacosServiceDiscovery {
         boolean match = transfers.stream().anyMatch(x -> x.getServiceId().equals(serviceId));
         if (match) {
             NacosDiscoveryTransferProperties.Transfer transfer = transfers.stream().filter(x -> Objects.equals(x.getServiceId(), serviceId)).toList().getFirst();
-            log.debug("transfer to nacos discovery serviceId:{}, namespace:{}, group:{} ", serviceId, transfer.getNamespace(), transfer.getGroup());
+            String namespace = StringUtils.isBlank(transfer.getNamespace()) ? discoveryProperties.getNamespace() : transfer.getNamespace();
+            String group = StringUtils.isBlank(transfer.getGroup()) ? discoveryProperties.getGroup() : transfer.getGroup();
+            log.info("energy cloud transfer namespace:{},group:{}", namespace, group);
             Properties nacosProperties = discoveryProperties.getNacosProperties();
-            nacosProperties.put(NAMESPACE, transfer.namespace);
+            nacosProperties.put(NAMESPACE, namespace);
             NamingService namingService = new NacosNamingService(nacosProperties);
-            List<Instance> instances = namingService.selectInstances(serviceId, transfer.group,
-                    true);
+            List<Instance> instances = namingService.selectInstances(serviceId, group, true);
             return hostToServiceInstanceList(instances, serviceId);
         }
         return super.getInstances(serviceId);

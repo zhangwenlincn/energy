@@ -2,7 +2,7 @@ server:
   port: 8184
 spring:
   application:
-    name: energy-server
+    name: dubbo-server
 
 dubbo:
   application:

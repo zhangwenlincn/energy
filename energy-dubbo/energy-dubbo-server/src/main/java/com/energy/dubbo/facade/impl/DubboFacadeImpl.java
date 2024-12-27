@@ -1,4 +1,4 @@
-package com.energy.dubbo.server.facade.impl;
+package com.energy.dubbo.facade.impl;
 
 import com.energy.base.result.ObjectResult;
 import com.energy.base.result.Results;

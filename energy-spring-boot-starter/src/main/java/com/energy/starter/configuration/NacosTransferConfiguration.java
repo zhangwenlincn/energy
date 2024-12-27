@@ -27,7 +27,7 @@ import org.springframework.context.annotation.Configuration;
 @AutoConfigureBefore({NacosDiscoveryAutoConfiguration.class})
 @EnableConfigurationProperties(NacosDiscoveryTransferProperties.class)
 @ConditionalOnClass(NacosServiceDiscovery.class)
-@ConditionalOnProperty(value = "energy.transfer.enabled", havingValue = "true")
+@ConditionalOnProperty(value = "energy.cloud.transfer.enabled", havingValue = "true")
 public class NacosTransferConfiguration {
 
     private static final Logger log = LoggerFactory.getLogger(NacosTransferConfiguration.class);

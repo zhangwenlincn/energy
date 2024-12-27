@@ -1,0 +1,8 @@
+server:
+  port: 8185
+spring:
+  application:
+    name: cloud-server
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.yaml
