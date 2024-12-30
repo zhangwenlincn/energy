@@ -3,6 +3,8 @@ package com.energy.dubbo.facade.impl;
 import com.energy.base.result.ObjectResult;
 import com.energy.base.result.Results;
 import com.energy.dubbo.facade.DubboFacade;
+import com.energy.starter.callback.CallbackTemplate;
+import com.energy.starter.callback.ObjectResultCallback;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +19,11 @@ public class DubboFacadeImpl implements DubboFacade {
 
     @Override
     public ObjectResult<String> dubbo(String req) {
-        log.info("dubbo req:{}", req);
-        return Results.objectResult("hello dubbo");
+        return CallbackTemplate.execute(new ObjectResultCallback<String>() {
+            @Override
+            public ObjectResult<String> doProcess() {
+                return Results.objectResult("hello dubbo");
+            }
+        });
     }
 }
