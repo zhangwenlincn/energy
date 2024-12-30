@@ -30,7 +30,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(EnergyException.class)
     public BaseResult handleException(EnergyException e) {
-        log.error("自定义异常 SkiffException:{}", e.getMessage(), e);
+        log.error("自定义异常 EnergyException:{}", e.getMessage(), e);
         return new BaseResult(false, e.getCode(), e.getMessage());
     }
 
